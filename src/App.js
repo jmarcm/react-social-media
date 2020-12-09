@@ -1,13 +1,18 @@
 import React from "react";
 import Login from "./components/Login";
+import Header from "./components/Header";
 
 function App() {
-    let user = "";
+    const [user, setUser] = React.useState("jm");
 
     if (!user) {
-        return <Login />;
+        return <Login setUser={setUser} />;
     }
-    return <div>app</div>;
+    return (
+        <>
+            <Header user={user} setUser={setUser} />
+        </>
+    );
 }
 
 export default App;
