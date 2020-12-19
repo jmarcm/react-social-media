@@ -13,3 +13,5 @@ From React BootCamp
 1. Post is added to an array
 1. Posts are added to or displayed by app
 1. Clear the inputs after adding a post
+    1. Add a statefull value to input text
+    1. For input file, need to reference it with Ref
