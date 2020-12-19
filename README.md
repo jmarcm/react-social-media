@@ -18,3 +18,4 @@ From React BootCamp
 1. Use PostList to diplay posts instead of displaying them in the app
 1. Move posts from PostList to Post
 1. Access properties directly in Post (more declarative)
+1. Instead of passing `posts` and `setPosts`, use a callback function

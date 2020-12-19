@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreatePost({ user, posts, setPosts }) {
+function CreatePost({ user, handleAddPost }) {
     const [content, setContent] = React.useState("");
     const [image, setImage] = React.useState(null);
     const imageInputRef = React.useRef();
@@ -8,10 +8,7 @@ function CreatePost({ user, posts, setPosts }) {
     function handleSubmitClick(event) {
         event.preventDefault();
         const post = { user, content, image };
-        let newPosts = [post, ...posts];
-
-        // update posts in app
-        setPosts(newPosts);
+        handleAddPost(post);
 
         // Clear inputs
         setContent("");
