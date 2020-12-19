@@ -15,13 +15,11 @@ function App() {
 
     const functionsCount = new Set();
 
-    function handleAddPost(newPost) {
-        setPosts([newPost, ...posts]);
-    }
+    const handleAddPost = React.useCallback(
+        (newPost) => setPosts([newPost, ...posts]),
+        [posts]
+    );
 
-    /**
-     * Every type the componant reender a new function is added ?
-     */
     functionsCount.add(handleAddPost);
     console.log(functionsCount);
 
