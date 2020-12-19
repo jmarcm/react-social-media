@@ -2,7 +2,7 @@ import React from "react";
 
 function CreatePost({ user, posts, setPosts }) {
     const [content, setContent] = React.useState("");
-    const [image, setImage] = React.useState(false);
+    const [image, setImage] = React.useState(null);
     const imageInputRef = React.useRef();
 
     function handleSubmitClick(event) {
@@ -15,6 +15,7 @@ function CreatePost({ user, posts, setPosts }) {
 
         // Clear inputs
         setContent("");
+        setImage(null);
         imageInputRef.current.value = "";
     }
 
@@ -35,7 +36,15 @@ function CreatePost({ user, posts, setPosts }) {
                 />
                 <button type="submit">Submit Post</button>
             </form>
-            <div id="answer">
+            <div
+                id="answer"
+                style={{
+                    width: 300,
+                    borderBottom: "3px dotted lightblue",
+                    marginBottom: "1.3em",
+                    paddingBottom: "0.4em",
+                }}
+            >
                 <p>{content}</p>
                 {image ? (
                     <img
@@ -46,7 +55,7 @@ function CreatePost({ user, posts, setPosts }) {
                 ) : (
                     <span className="no-image"></span>
                 )}
-                <div>++++++++++++++++++++</div>
+                {/* <div>++++++++++++++++++++</div> */}
             </div>
         </div>
     );
