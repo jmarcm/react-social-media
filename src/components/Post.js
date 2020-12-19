@@ -1,11 +1,11 @@
 import React from "react";
 
-function Post({ post }) {
+function Post({ image, content, user }) {
     return (
         <>
-            {post.image && (
+            {image && (
                 <img
-                    src={URL.createObjectURL(post.image)}
+                    src={URL.createObjectURL(image)}
                     alt=""
                     style={{
                         width: 200,
@@ -14,8 +14,8 @@ function Post({ post }) {
                     }}
                 />
             )}
-            <p>{post.content}</p>
-            <p>{post.user}</p>
+            <p>{content}</p>
+            <p>{user}</p>
         </>
     );
 }

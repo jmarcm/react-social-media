@@ -17,3 +17,4 @@ From React BootCamp
     1. For input file, need to reference it with Ref
 1. Use PostList to diplay posts instead of displaying them in the app
 1. Move posts from PostList to Post
+1. Access properties directly in Post (more declarative)
