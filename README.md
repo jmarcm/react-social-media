@@ -15,3 +15,4 @@ From React BootCamp
 1. Clear the inputs after adding a post
     1. Add a statefull value to input text
     1. For input file, need to reference it with Ref
+1. Use PostList to diplay posts instead of displaying them in the app

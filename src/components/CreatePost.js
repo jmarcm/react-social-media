@@ -46,6 +46,7 @@ function CreatePost({ user, posts, setPosts }) {
                 ) : (
                     <span className="no-image"></span>
                 )}
+                <div>++++++++++++++++++++</div>
             </div>
         </div>
     );
